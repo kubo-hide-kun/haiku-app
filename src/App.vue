@@ -13,7 +13,13 @@
       <router-link to="/Form">Form</router-link>
       |
       <!--mainページ-->
-      <router-link to="/main">main</router-link>
+      <router-link to="/main">Main</router-link>
+      |
+      <!--mainページ-->
+      <router-link to="/signup">Signup</router-link>
+      |
+      <!--mainページ-->
+      <router-link to="/signin">signin</router-link>
       |
     </div>
 <div class="fireworks">fireWorks</div>

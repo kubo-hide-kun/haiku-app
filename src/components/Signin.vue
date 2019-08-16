@@ -29,7 +29,7 @@ export default {
         user => {
           alert('Success!')
           this.$router.push('/')
-          console.log(user)
+          //console.log(user)
         },
         err => {
           alert(err.message)
