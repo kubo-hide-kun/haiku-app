@@ -1,27 +1,22 @@
 <template>
-
-<div class="box11">自己紹介</div>
+<div class="form">
+  <p>あなたの考えた俳句を入力してください</p>
+  <input v-model="haiku">
+  <button v-on:click="send">俳句で画像を生成</button>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'from',
+  name: 'form',
 }
 </script>
 <style scoped>
-.box11{
-    padding: 0.5em 1em;
-    margin: 2em 2em 2em 2em;
-    color: #5d627b;
-    background:rgba(225,225,225,0.7);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-    z-index: 50;
-    position: relative;
-    height:50%;
-    width:80%;
-    font-size:50px;
+.form {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  position: absolute;
 }
-
-
-
 </style>
