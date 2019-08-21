@@ -38,20 +38,15 @@ export default {
       this.img_name = files[0].name;
     },
     createImage(file) {
-      //this.uploadedImage = false;
       let reader = new FileReader();
-      console.log(this.uploadedImage);
       reader.onload = e => {
         this.uploadedImage = e.target.result;
-        console.log(this.uploadedImage);
         
       };
       reader.readAsDataURL(file);
     },
     remove(event) {
       this.uploadedImage = '';
-      console.log(this.uploadedImage);
-      
     }
   }
 };
