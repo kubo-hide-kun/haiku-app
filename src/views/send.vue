@@ -1,8 +1,7 @@
 <template>
   <div class="send">
     <div class="input-word">
-    <p>あなたの考えた俳句を入力してください</p>
-    <input v-model="haiku" />
+    単語: <input v-model="haiku" />
     </div>
 
     <div class="input-img">
@@ -18,7 +17,7 @@
 
 
     <div v-show="uploadedImage" @click="remove" key="send-img"><p>{{img_name}} x </p></div>
-    <div v-show="uploadedImage && haiku"><button>test</button></div>
+    <div v-show="uploadedImage && haiku"><button>投句</button></div>
   </div>
 </template>
 

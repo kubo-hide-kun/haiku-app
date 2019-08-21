@@ -10,10 +10,10 @@
 
       |
       <!--Formページ-->
-      <router-link to="/Form">Form</router-link>
+      <router-link to="/form">俳句</router-link>
       |
       <!--Formページ-->
-      <router-link to="/Send">Send</router-link>
+      <router-link to="/send">吟行</router-link>
       |
 
     </div>
