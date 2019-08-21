@@ -5,22 +5,17 @@
       <!--Homeページ-->
      
       <!--<router-link to="/">Home</router-link> -->
-      |
       <!--aboutページを無効化-->
       <!-- <router-link to="/about">About</router-link> -->
 
+      |
       <!--Formページ-->
       <router-link to="/Form">Form</router-link>
       |
-      <!--mainページ-->
-      <router-link to="/main">Main</router-link>
+      <!--Formページ-->
+      <router-link to="/Send">Send</router-link>
       |
-      <!--mainページ-->
-      <router-link to="/signup">Signup</router-link>
-      |
-      <!--mainページ-->
-      <router-link to="/signin">signin</router-link>
-      |
+
     </div>
 <div class="fireworks">fireWorks</div>
     <!--画面遷移アニメーション-->
