@@ -30,7 +30,7 @@
     .fab {
         position: fixed;
         right: -100px;
-        bottom: -70px;
+
         transition: all 0.1s ease-in-out;
     }
 
