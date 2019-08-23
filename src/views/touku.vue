@@ -1,10 +1,10 @@
 <template>
-<div>
-    <button class="touku" @click="touku">
-        <img src="../assets/toukou.png" class="toukou">
-    </button>
-    <textarea class="paper" v-model="haiku"/>
-</div>
+    <div>
+        <button class="touku" @click="touku">
+            <img src="../assets/toukou.png" class="toukou">
+        </button>
+        <textarea class="paper" v-model="haiku"/>
+    </div>
 </template>
 
 <script>
@@ -16,8 +16,21 @@
             };
         },
         methods: {
-            touku(){
-                console.log(this.haiku);
+            touku() {
+                let h = this.haiku.split(/\r\n|\r|\n/)
+
+
+                fetch('http://127.0.0.1:5042/haiku', {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        "first": h[0],
+                        "second": h[1],
+                        "third": h[2]
+                    })
+                }).then(r => r.json()).then(j => console.log(j))
             }
         }
     };
@@ -41,14 +54,16 @@
         font-size: 40px;
         font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
     }
+
     .touku {
         top: 6%;
         right: 10%;
         position: absolute;
         z-index: 60;
     }
-    .toukou{
-        width:30px;                            
-        height:30px;
+
+    .toukou {
+        width: 30px;
+        height: 30px;
     }
 </style>

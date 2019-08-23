@@ -15,73 +15,16 @@
         name: 'recieve',
         data() {
             return {
-                haikus: [
-                    {
-                        first: "コン研や",
-                        second: "コンピュータを",
-                        third: "研究だ",
-                        img: [],
-                        season: "summer"
-                    },
-                    {
-                        first: "高専は",
-                        second: "サル山バカ山",
-                        third: "敗北者",
-                        img: [],
-                        season: "summer"
-                    },
-                    {
-                        first: "Vue",
-                        second: "React",
-                        third: "Angular",
-                        img: [],
-                        season: "summer"
-                    },
-                    {
-                        first: "コン研や",
-                        second: "コンピュータを",
-                        third: "研究だ",
-                        img: [],
-                        season: "summer"
-                    },
-                    {
-                        first: "高専は",
-                        second: "サル山バカ山",
-                        third: "敗北者",
-                        img: [],
-                        season: "summer"
-                    },
-                    {
-                        first: "Vue",
-                        second: "React",
-                        third: "Angular",
-                        img: [],
-                        season: "summer"
-                    },
-                    {
-                        first: "コン研や",
-                        second: "コンピュータを",
-                        third: "研究だ",
-                        img: [],
-                        season: "summer"
-                    },
-                    {
-                        first: "高専は",
-                        second: "サル山バカ山",
-                        third: "敗北者",
-                        img: [],
-                        season: "summer"
-                    },
-                    {
-                        first: "Vue",
-                        second: "React",
-                        third: "Angular",
-                        img: [],
-                        season: "summer"
-                    },
-                ],
+                haikus: null,
             }
+        },
+        mounted() {
+            fetch('http://127.0.0.1:5042/haiku')
+                .then(r => r.json()).then(j => this.haikus = j)
+
         }
+
+
     }
 </script>
 <style scoped>
