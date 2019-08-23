@@ -31,6 +31,8 @@
                         "third": h[2]
                     })
                 }).then(r => r.json()).then(j => console.log(j))
+
+                this.$router.push('/timeline')
             }
         }
     };

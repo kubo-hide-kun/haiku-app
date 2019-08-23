@@ -34,7 +34,7 @@
         left: 50%;
         width: 70%;
         z-index: 60;
-        position: absolute;
+        position: fixed;
     }
 
     .yokonaga {

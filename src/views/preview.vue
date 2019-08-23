@@ -50,11 +50,11 @@
 </script>
 <style scoped>
     .farst {
-        margin: 20px;
+        margin: 0px;
     }
 
     .second {
-        margin: 20px;
+        margin: 0px;
     }
 
     .preview {
@@ -88,7 +88,7 @@
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
         font-size: 60px;
-        font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
+        font-family:"YuMin-Medium";
         padding-top: 0px;
         z-index: 60;
         position: absolute;

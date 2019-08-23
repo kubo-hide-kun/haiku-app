@@ -75,6 +75,9 @@
                     method: 'POST',
                     body: formdata
                 }).then(r => r.json()).then(j => console.log(j))
+
+                this.$router.push('/timeline')
+
             },
             remove() {
                 this.uploadedImage = '';
@@ -93,6 +96,7 @@
     /*}*/
 
     .outer {
+        /*position: fixed;*/
 
     }
 

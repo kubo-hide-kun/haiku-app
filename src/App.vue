@@ -56,6 +56,7 @@
 
 </template>
 <script>
+    document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 </script>
 <style>
     .toukou {
@@ -144,7 +145,7 @@
         background-color: rgba(255, 255, 255, 0.9);
         color: #000;
         font-size: 30px;
-        font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
+        font-family:"YuMin-Medium";
         text-shadow: 0 0 1px #000;
         margin: 0;
         padding: 0;
