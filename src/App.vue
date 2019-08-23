@@ -1,44 +1,19 @@
 <template>
-  <div id="app" class="bg">
-    <!--ナビゲーションバーのリンク先-->
-    <div id="nav" class="box17 fire">
-      <!--Homeページ-->
-     
-      <!--<router-link to="/">Home</router-link> -->
-      <!--aboutページを無効化-->
-      <!-- <router-link to="/about">About</router-link> -->
+<center>
+<div id="wrapper">
+<div class="fireworks"><p id="p">はいくゆー</p></div>
 
-      |
-      <!--Formページ-->
-      <router-link to="/form">俳句</router-link>
-      |
-      <!--Formページ-->
-      <router-link to="/send">吟行</router-link>
-      |
-
-    </div>
-<div class="fireworks">fireWorks</div>
     <!--画面遷移アニメーション-->
       <transition name="page">
       <router-view/>
       </transition> 
 <center>
 
-
       <div class="wrapper">
+<img src="./assets/bom1.jpg" width="100%" height="100%">
+
 	<div class="container">
 	<ul class="bg-bubbles">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-    <li></li>
 		<li></li>
 		<li></li>
 		<li></li>
@@ -52,21 +27,58 @@
   </div>  
   </div>
 </center>
-
   </div>
 
-</template>
 
+    <!--ナビゲーションバーのリンク先-->
+    <div id="nav" class="fire">
+      <!--Homeページ-->
+     
+      <!--<router-link to="/">Home</router-link> -->
+      <!--aboutページを無効化-->
+      <!-- <router-link to="/about">About</router-link> -->
+
+      
+      <!--Formページ-->
+      <router-link to="/form" id="kukai">句会
+      <!--<img src="./assets/haiku.png" width="90" height="90" class="bar">-->
+      </router-link>
+      
+      <!--Formページ-->
+      <router-link to="/send" id="ginkou">吟行</router-link>
+
+
+    </div>
+    
+  </center>
+
+</template>
+<script>
+$( "#kukai" ).click(function() {
+$(this).addClass('kukai-bg1','kukai-bg2');
+localStorage.setItem('clicked', '1');
+});
+if(localStorage.getItem("clicked") != null){
+$("#kukai").addClass('kukai-bg');
+}
+</script>
 <style>
+.kukai-bg{
+  background-color:;
+}
+#template{
+font-family: "Yu Mincho Light","YuMincho",‘Yu Mincho’,‘游明朝体‘,’ヒラギノ明朝 ProN’,‘Hiragino Mincho ProN’,‘游明朝体+36ポかな’,’YuMincho +36p Kana’,‘HanziPen TC’,cursive;
+
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  
 }
 #nav {
-  padding: 20px;
+  padding: 0px;
 }
 
 #nav a {
@@ -84,60 +96,50 @@
         opacity: 0;
         transform: translateX(-30%);
     }
-
-.fireworks{
-  width: 100%;
-  height: 60px;
-  background: #000;
-  margin-top: 460px;
-  z-index: 1;
-  position: absolute;
-  color:#FE2E2E;
-  font-size:40px;
-  font-family: "Snell Roundhand";
-  text-shadow: 0 0 3vw #F40A35;
+#wrapper {
+  width:100%;
+  overflow:hidden;
 }
-.fireworks {
-  animation: fireworks 1s ease infinite;
-  -moz-animation: fireworks 1s ease infinite;
-  -webkit-animation: fireworks 1s ease infinite;
-}
-
-@keyframes fireworks {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #FED128;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
-    color: #806914;
-  }
-}
-
-
-
 
 .fire{
   color:#FE2E2E;
   font-size:24px;
-  font-family: "Snell Roundhand";
-  text-shadow: 0 0 3vw #F40A35;
+  width: 100%;
+  position: absolute;
+	bottom: 0px;
+  z-index: 80;
+  height: 13%;
+  font-size:70px;
+  background-color:#E7FBD4;
+  font-family: "KouzanBrushFontSousyoOTF","游明朝体+36ポかな","游明朝体";
+  background-color: rgba(255,255,255,0.6);
+  position: fixed;
 }
 
-
-
+.fireworks{
+  width: 100%;
+  height: 12%;
+  background-color: rgba(255,255,255,0.9);
+  color:#000;
+  font-size:40px;
+  font-family: "KouzanBrushFontSousyoOTF","游明朝体+36ポかな","游明朝体";
+  text-shadow: 0 0 1px #000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+}
+#p{
+  margin: 10px;
+}
 
 .wrapper {
-  background: #F3F781;
-  background: -webkit-gradient(linear, left top, right bottom, from(#F3F781), to(#FF0040));
-  background: linear-gradient(to bottom right, #F3F781 0%, #FF0040 100%);
   position: absolute;
-  top: 50%;
   left: 0;
   width: 100%;
-  height: 470px;
-  margin-top: -250px;
+  height: 100%;
+  margin-top: 0px;
   overflow: hidden;
 }
 .wrapper.form-success .container h1 {
@@ -147,7 +149,7 @@
 .container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 80px 0;
+  padding: 0 0;
   height: 400px;
   text-align: center;
 }
