@@ -1,24 +1,12 @@
 <template>
     <div class="timeline">
-        <center>
-            <section class="tategaki">
-
-                <div class="farst">古池や</div>
-                <div class="second">蛙飛び込む</div>
-                <div class="third">水の音</div>
-
-            </section>
-
-            <div id="haiku-show" class="haiku-show">
-                <transition name="fade">
-                    <img :src="images[index]" :key="images[index]" height="213" class="haiku-list">
-                </transition>
-            </div>
-
-        </center>
-
-        <!--<button class="fab" type="submit" @click="onsubmit"><img src="../assets/hude.png" width="60" height="60"></button>-->
-
+        <div class="yokonaga" v-for="haiku in haikus" :key="haiku.id">
+            <router-link :to="{ name : 'preview', params : { id: haiku.id }}">
+                <div>{{haiku.first}}</div>
+                <div>{{haiku.second}}</div>
+                <div>{{haiku.third}}</div>
+            </router-link>
+        </div>
     </div>
 </template>
 
@@ -27,84 +15,97 @@
         name: 'recieve',
         data() {
             return {
-                index: 0,
-                images: [
-                    "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
-                    "https://cdn.worldvectorlogo.com/logos/react.svg",
-                    "https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg"
-                ]
+                haikus: [
+                    {
+                        first: "コン研や",
+                        second: "コンピュータを",
+                        third: "研究だ",
+                        img: [],
+                        season: "summer"
+                    },
+                    {
+                        first: "高専は",
+                        second: "サル山バカ山",
+                        third: "敗北者",
+                        img: [],
+                        season: "summer"
+                    },
+                    {
+                        first: "Vue",
+                        second: "React",
+                        third: "Angular",
+                        img: [],
+                        season: "summer"
+                    },
+                    {
+                        first: "コン研や",
+                        second: "コンピュータを",
+                        third: "研究だ",
+                        img: [],
+                        season: "summer"
+                    },
+                    {
+                        first: "高専は",
+                        second: "サル山バカ山",
+                        third: "敗北者",
+                        img: [],
+                        season: "summer"
+                    },
+                    {
+                        first: "Vue",
+                        second: "React",
+                        third: "Angular",
+                        img: [],
+                        season: "summer"
+                    },
+                    {
+                        first: "コン研や",
+                        second: "コンピュータを",
+                        third: "研究だ",
+                        img: [],
+                        season: "summer"
+                    },
+                    {
+                        first: "高専は",
+                        second: "サル山バカ山",
+                        third: "敗北者",
+                        img: [],
+                        season: "summer"
+                    },
+                    {
+                        first: "Vue",
+                        second: "React",
+                        third: "Angular",
+                        img: [],
+                        season: "summer"
+                    },
+                ],
             }
-        },
-        mounted() {
-            setInterval(() => {
-                this.index = this.index < this.images.length - 1 ? this.index + 1 : 0;
-            }, 3000);
-        },
+        }
     }
 </script>
 <style scoped>
-    .farst {
-        margin: 20px;
-    }
-
-    .second {
-        margin: 20px;
-    }
 
     .timeline {
         top: 15%;
         left: 50%;
-        height: 65%;
-        width: 60%;
+        width: 70%;
+        z-index: 60;
+        position: absolute;
+    }
+
+    .yokonaga {
         transform: translateX(-50%);
-        z-index: 60;
-        position: absolute;
-        background-color: #FFFFFF;
-        border: solid 10px #1D5329;
-        box-shadow: 5px 2px 0px 0px rgba(0, 0, 0, 0.8);
-        margin: 0px;
-    }
-
-    .fab {
-        position: fixed;
-        right: -100px;
-
-        transition: all 0.1s ease-in-out;
-    }
-
-    .fab:hover {
-        box-shadow: 0 6px 14px 0 #666;
-        transform: scale(1.05);
-    }
-
-    .tategaki {
-        -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
-        font-size: 60px;
         font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
-        padding-top: 0px;
-        z-index: 60;
-        position: absolute;
+        padding: 10px;
+        margin-bottom: 10px;
+        z-index: 20;
         background-color: rgba(255, 255, 255, 0.6);
         width: 100%;
         font-weight: bold;
-    }
-
-    .haiku-list {
-        bottom: 30%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 50;
-        position: absolute;
-    }
-
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity 0.5s;
-    }
-
-    .fade-enter, .fade-leave-to {
-        opacity: 0;
+        background-color: #FFFFFF;
+        border: solid 10px #1D5329;
+        box-shadow: 5px 2px 0px 0px rgba(0, 0, 0, 0.8);
     }
 
 </style>
