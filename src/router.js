@@ -1,10 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-
-//ログイン機能
-import Signup from '@/components/Signup'
-import Signin from '@/components/Signin'
 
 //Router機能
 Vue.use(Router)
@@ -15,21 +10,6 @@ export default new Router({
   base: process.env.BASE_URL,
   //URL一覧
   routes: [
-    {//home
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {//ログアウト
-      path: '/signup',
-      name: 'Signup',
-      component: Signup
-    },
-    {//ログイン
-      path: '/signin',
-      name: 'Signin',
-      component: Signin
-    },
     {//about
       path: '/about',
       name: 'about',
@@ -47,6 +27,11 @@ export default new Router({
       path: '/main',
       name: 'main',
       component: () => import('./views/main.vue')
+    },
+    {
+      path: '/send',
+      name: 'send',
+      component: () => import('./views/send.vue')
     },
 
   ]
