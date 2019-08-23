@@ -35,20 +35,20 @@
         <div id="nav" class="fire">
             <!--Homeページ-->
             <router-link to="/touku" id="touku" class="touku">
-              <button type="button"><img src="./assets/toukou.png" class="toukou"></button>
+                <button type="button"><img src="./assets/toukou.png" class="toukou"></button>
             </router-link>
             <!--<router-link to="/">Home</router-link> -->
             <!--aboutページを無効化-->
             <!-- <router-link to="/about">About</router-link> -->
             <!--Formページ-->
-            <router-link to="/kukai" id="kukai" class="kukai">
-                <img src="./assets/kukai_off.png" class="bar" id="gazo" onclick="changeIMG()">
+            <router-link to="/timeline" id="kukai" class="preview">
+                <img src="./assets/kukai_off.png" class="bar" id="gazo">
             </router-link>
 
             <!--Formページ-->
             <router-link to="/send" id="ginkou" class="ginkou">
-            <img src="./assets/ginkou_off.png" class="bar">
-            
+                <img src="./assets/ginkou_off.png" class="bar">
+
             </router-link>
         </div>
 
@@ -58,34 +58,30 @@
 <script>
 </script>
 <style>
-.toukou{
-    width:65px;                            
-    height:65px;
-    position: absolute;
-    z-index: 80;
-    bottom:20%;
-    transform: translateX(-50%);
-}
-.bar{
-    width:50px;                             
-    height:50px;
-    padding-top:50%;
-}
-.kukai {
-    float: left;
-    padding-left: 10%;
-}
- .ginkou {
-    float: right;
-    padding-right: 10%;
- }
- .kukai:active {
-    background-image:url("./assets/kukai_on.png"); 
-}
- .ginkou:active {
-    background-image:url("./assets/ginkou_on.png"); 
-}
+    .toukou {
+        width: 65px;
+        height: 65px;
+        position: absolute;
+        z-index: 80;
+        bottom: 20%;
+        transform: translateX(-50%);
+    }
 
+    .bar {
+        width: 50px;
+        height: 50px;
+        padding-top: 50%;
+    }
+
+    .preview {
+        float: left;
+        padding-left: 10%;
+    }
+
+    .ginkou {
+        float: right;
+        padding-right: 10%;
+    }
 
     #template {
         font-family: "Yu Mincho Light", "YuMincho", ‘Yu Mincho’, ‘游明朝体‘, ’ヒラギノ明朝 ProN’, ‘Hiragino Mincho ProN’, ‘游明朝体+36 ポかな’, ’YuMincho+36 p Kana’, ‘HanziPen TC’, cursive;
