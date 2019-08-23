@@ -2,7 +2,7 @@
     <center>
 
         <div id="wrapper">
-            <div class="fireworks"><p id="p">はいくゆー</p></div>
+            <div class="fireworks"><p id="p">はいくゆう</p></div>
 
             <!--画面遷移アニメーション-->
             <transition name="page">
@@ -84,7 +84,7 @@
     }
 
     #template {
-        font-family: "Yu Mincho Light", "YuMincho", ‘Yu Mincho’, ‘游明朝体‘, ’ヒラギノ明朝 ProN’, ‘Hiragino Mincho ProN’, ‘游明朝体+36 ポかな’, ’YuMincho+36 p Kana’, ‘HanziPen TC’, cursive;
+        font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体+36 ポかな", "YuMincho+36 p Kana", "HanziPen TC", cursive;
 
     }
 
@@ -143,7 +143,7 @@
         height: 12%;
         background-color: rgba(255, 255, 255, 0.9);
         color: #000;
-        font-size: 40px;
+        font-size: 30px;
         font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
         text-shadow: 0 0 1px #000;
         margin: 0;
@@ -154,7 +154,7 @@
     }
 
     #p {
-        margin: 10px;
+        margin: 30px;
     }
 
     .wrapper {

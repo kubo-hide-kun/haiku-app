@@ -109,6 +109,8 @@
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
         font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
+        font-size: 30px;
+        border-radius: 20% 20% 20% 20%
     }
 
 
