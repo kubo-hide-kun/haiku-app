@@ -40,7 +40,7 @@
 
 
             <!--Formページ-->
-            <router-link to="/form" id="kukai">句会
+            <router-link to="/kukai" id="kukai">句会
                 <!--<img src="./assets/haiku.png" width="90" height="90" class="bar">-->
             </router-link>
 
