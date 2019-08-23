@@ -20,7 +20,7 @@
         },
         methods: {
             touku(){
-                console.log(this.haiku);
+                console.log(this.haiku.split(/\r\n|\r|\n/));
             }
         }
     };
