@@ -35,19 +35,19 @@
         <div id="nav" class="fire">
             <!--Homeページ-->
             <router-link to="/touku" id="touku" class="touku">
-                <button type="button"><img src="./assets/toukou.png" class="toukou"></button>
+                <button type="button"><img src="./assets/toukou＠2x.png" class="toukou"></button>
             </router-link>
             <!--<router-link to="/">Home</router-link> -->
             <!--aboutページを無効化-->
             <!-- <router-link to="/about">About</router-link> -->
             <!--Formページ-->
             <router-link to="/timeline" id="kukai" class="preview">
-                <img src="./assets/kukai_off.png" class="bar" id="gazo">
+                <img src="./assets/kukai_off@2x.png" class="bar" id="gazo">
             </router-link>
 
             <!--Formページ-->
             <router-link to="/send" id="ginkou" class="ginkou">
-                <img src="./assets/ginkou_off.png" class="bar">
+                <img src="./assets/ginkou_off@2x.png" class="bar">
 
             </router-link>
         </div>
@@ -56,12 +56,11 @@
 
 </template>
 <script>
-    document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 </script>
 <style>
     .toukou {
-        width: 65px;
-        height: 65px;
+        width: 75px;
+        height: 75px;
         position: absolute;
         z-index: 80;
         bottom: 20%;
@@ -69,23 +68,24 @@
     }
 
     .bar {
-        width: 50px;
-        height: 50px;
-        padding-top: 50%;
+        width: 60%;
+        height: 60%;
+        padding-top: 20%;
     }
 
     .preview {
         float: left;
-        padding-left: 10%;
+        padding-left: 1%;
+        margin-top: 8px;
     }
 
     .ginkou {
         float: right;
-        padding-right: 10%;
+        padding-right: 1%;
     }
 
     #template {
-        font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝体+36 ポかな", "YuMincho+36 p Kana", "HanziPen TC", cursive;
+        font-family: "Yu Mincho Light", "YuMincho", ‘Yu Mincho’, ‘游明朝体‘, ’ヒラギノ明朝 ProN’, ‘Hiragino Mincho ProN’, ‘游明朝体+36 ポかな’, ’YuMincho+36 p Kana’, ‘HanziPen TC’, cursive;
 
     }
 
@@ -144,8 +144,8 @@
         height: 12%;
         background-color: rgba(255, 255, 255, 0.9);
         color: #000;
-        font-size: 30px;
-        font-family:"YuMin-Medium";
+        font-size: 40px;
+        font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
         text-shadow: 0 0 1px #000;
         margin: 0;
         padding: 0;
@@ -155,7 +155,7 @@
     }
 
     #p {
-        margin: 30px;
+        margin: 10px;
     }
 
     .wrapper {

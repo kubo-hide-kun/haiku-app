@@ -112,9 +112,10 @@
         -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
-        font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
-        font-size: 30px;
-        border-radius: 20% 20% 20% 20%
+        font-family:"YuMin-Medium";
+        font-size: 20px;
+        border-radius: 40% 40% 40% 40%;
+        box-shadow: 2px 1px 0px 0px rgba(0, 0, 0, 0.8);
     }
 
 

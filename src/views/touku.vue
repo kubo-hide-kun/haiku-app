@@ -1,7 +1,6 @@
 <template>
     <div>
-        <button class="touku" @click="touku">
-            <img src="../assets/toukou.png" class="toukou">
+        <button class="touku" @click="touku">投句
         </button>
         <textarea class="paper" v-model="haiku"/>
     </div>
@@ -54,18 +53,24 @@
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
         font-size: 40px;
-        font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
+        font-family:"YuMin-Medium";
     }
 
     .touku {
-        top: 6%;
-        right: 10%;
+        top: 4%;
+        right: 5%;
         position: absolute;
         z-index: 60;
-    }
-
-    .toukou {
-        width: 30px;
-        height: 30px;
+        background: #FFF; /*ボタン色*/
+        color: #222;
+        border-radius: 3px;
+        padding: 4px;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        font-family:"YuMin-Medium";
+        font-size: 20px;
+        border-radius: 40% 40% 40% 40%;
+        box-shadow: 2px 1px 0px 0px rgba(0, 0, 0, 0.8);
     }
 </style>
