@@ -18,7 +18,7 @@ export default new Router({
         {
             path: '/timeline',
             name: 'timeline',
-            component: () => import('./views/preview.vue')
+            component: () => import('./views/timeline.vue')
         },
         {
             path: '/send',
