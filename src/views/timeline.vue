@@ -1,5 +1,5 @@
 <template>
-    <div class="kukai">
+    <div class="timeline">
         <center>
             <section class="tategaki">
 
@@ -10,10 +10,10 @@
             </section>
 
             <div id="haiku-show" class="haiku-show">
-  <transition name="fade">
-    <img :src="images[index]" :key="images[index]" height="213" class="haiku-list">
-  </transition>
-</div>
+                <transition name="fade">
+                    <img :src="images[index]" :key="images[index]" height="213" class="haiku-list">
+                </transition>
+            </div>
 
         </center>
 
@@ -24,32 +24,34 @@
 
 <script>
     export default {
-  name: 'recieve',
-  data() {
-    return{
-      index: 0,
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
-        "https://cdn.worldvectorlogo.com/logos/react.svg",
-        "https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg"
-      ]
+        name: 'recieve',
+        data() {
+            return {
+                index: 0,
+                images: [
+                    "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
+                    "https://cdn.worldvectorlogo.com/logos/react.svg",
+                    "https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg"
+                ]
+            }
+        },
+        mounted() {
+            setInterval(() => {
+                this.index = this.index < this.images.length - 1 ? this.index + 1 : 0;
+            }, 3000);
+        },
     }
-  },
-  mounted() {
-    setInterval(() => {
-      this.index = this.index < this.images.length-1 ? this.index+1 : 0;
-    },3000);
-  },
-}
 </script>
 <style scoped>
     .farst {
         margin: 20px;
     }
-    .second{
+
+    .second {
         margin: 20px;
     }
-    .kukai {
+
+    .timeline {
         top: 15%;
         left: 50%;
         height: 65%;
@@ -81,26 +83,28 @@
         writing-mode: vertical-rl;
         font-size: 60px;
         font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
-        padding-top:0px;
+        padding-top: 0px;
         z-index: 60;
         position: absolute;
         background-color: rgba(255, 255, 255, 0.6);
-        width:100%;
-        font-weight:bold; 
+        width: 100%;
+        font-weight: bold;
     }
 
-.haiku-list {
-  bottom:30%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 50;
-  position: absolute;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
+    .haiku-list {
+        bottom: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 50;
+        position: absolute;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0.5s;
+    }
+
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
 
 </style>

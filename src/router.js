@@ -11,9 +11,14 @@ export default new Router({
     //URL一覧
     routes: [
         {//form
-            path: '/kukai',
-            name: 'kukai',
-            component: () => import('./views/kukai.vue')
+            path: '/timeline/:id',
+            name: 'preview',
+            component: () => import('./views/preview.vue')
+        },
+        {
+            path: '/timeline',
+            name: 'timeline',
+            component: () => import('./views/preview.vue')
         },
         {
             path: '/send',
