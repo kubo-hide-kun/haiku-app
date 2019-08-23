@@ -11,7 +11,7 @@ export default new Router({
     //URL一覧
     routes: [
         {//form
-            path: '/kukai',
+            path: '/kukai/:id',
             name: 'kukai',
             component: () => import('./views/kukai.vue')
         },
