@@ -20,6 +20,11 @@ export default new Router({
             name: 'send',
             component: () => import('./views/send.vue')
         },
+        {
+            path: '/touku',
+            name: 'touku',
+            component: () => import('./views/touku.vue')
+        },
 
     ]
 })
