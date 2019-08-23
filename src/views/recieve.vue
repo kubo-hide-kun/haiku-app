@@ -1,8 +1,8 @@
 <template>
 <div id="haiku-show" class="haiku-show">
-  <img src="../assets/logo.png" class="haiku-list">
-  <img src="../assets/logo.png" class="haiku-list">
-  <img src="../assets/logo.png" class="haiku-list">
+  <transition name="fade">
+    <img :src="images[index]" :key="images[index]" height="213" class="haiku-list">
+  </transition>
 </div>
 </template>
 
@@ -12,26 +12,18 @@ export default {
   data() {
     return{
       index: 0,
+      images: [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
+        "https://cdn.worldvectorlogo.com/logos/react.svg",
+        "https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg"
+      ]
     }
   },
   mounted() {
-    const images = document.getElementsByClassName('haiku-list');
-    this.haikuShow(images);
-    setInterval(()=>{
-      this.index = this.index < images.length-1 ? this.index+1 : 0;
-      this.haikuShow(images);
+    setInterval(() => {
+      this.index = this.index < this.images.length-1 ? this.index+1 : 0;
     },3000);
   },
-  methods: {
-    haikuShow(images) {
-      const current = images[this.index];
-      const prev = images[this.index-1] ? images[this.index-1] : images[images.length-1];
-      current.classList.add('feedin');
-      current.classList.remove('feedout');
-      prev.classList.remove('feedin');
-      prev.classList.add('feedout');
-    }
-  }
 }
 </script>
 <style scoped>
@@ -42,15 +34,10 @@ export default {
   z-index: 60;
   position: absolute;
 }
-
-.feedin {
-  opacity: 1;
+.fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s;
 }
-
-
-.feedout {
+.fade-enter, .fade-leave-to {
   opacity: 0;
-  transition: opacity 0.5s;
 }
 </style>
