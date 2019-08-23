@@ -45,7 +45,7 @@ export default {
       };
       reader.readAsDataURL(file);
     },
-    remove(event) {
+    remove() {
       this.uploadedImage = '';
     }
   }
