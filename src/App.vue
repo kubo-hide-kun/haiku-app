@@ -34,7 +34,9 @@
         <!--ナビゲーションバーのリンク先-->
         <div id="nav" class="fire">
             <!--Homeページ-->
-            <button type="button"><img src="./assets/toukou.png" class="toukou"></button>
+            <router-link to="/touku" id="touku" class="touku">
+              <button type="button"><img src="./assets/toukou.png" class="toukou"></button>
+            </router-link>
             <!--<router-link to="/">Home</router-link> -->
             <!--aboutページを無効化-->
             <!-- <router-link to="/about">About</router-link> -->
