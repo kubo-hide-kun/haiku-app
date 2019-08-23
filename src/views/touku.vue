@@ -1,7 +1,10 @@
 <template>
 <div>
+    <router-link to="/kukai" class="cancel-router">
+        <img src="../assets/cancel.png" class="cancel">
+    </router-link>
     <button class="touku" @click="touku">
-        <img src="../assets/toukou.png" class="toukou">
+        投句
     </button>
     <textarea class="paper" v-model="haiku"/>
 </div>
@@ -42,13 +45,27 @@
         font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
     }
     .touku {
-        top: 6%;
-        right: 10%;
+        top: 4%;
+        right: 5%;
+        position: absolute;
+        z-index: 60;
+        background: #FFF;/*ボタン色*/
+        color: #222;
+        border-radius: 3px;
+        padding: 4px;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        font-family: "KouzanBrushFontSousyoOTF", "游明朝体+36ポかな", "游明朝体";
+    }
+    .cancel-router {
+        top: 4%;
+        left: 5%;
         position: absolute;
         z-index: 60;
     }
-    .toukou{
-        width:30px;                            
-        height:30px;
+    .cancel {
+        width: 15px;
+        height: 15px;
     }
 </style>
